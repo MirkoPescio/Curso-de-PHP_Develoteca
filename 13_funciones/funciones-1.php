@@ -1,8 +1,8 @@
 <?php
 
-  function imprimirNombre($nombre){
+  function imprimirNombre($nombre, $apellido=""){
     // Rutinas (instrucciones)
-    echo "Hola ".$nombre."<br>";
+    echo "Hola ".$nombre." ".$apellido."<br>";
   }
 
   function imprimirEstudio($estudio){
@@ -11,9 +11,10 @@
 
   function main(){
     $nombre = "Mirko";
+    $apellido = "Pescio";
     $estudio = "Licenciatura en Sistemas";
     // Llamo a la función
-    imprimirNombre($nombre);
+    imprimirNombre($nombre, $apellido);
     imprimirEstudio($estudio);
   }
   main()
