@@ -1,23 +1,52 @@
-<?php?>
+<?php include("header.php"); ?>
+<br/>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería</title>
-</head>
-<body>
-    
-    <nav>
-        <a href="index.php">Inicio</a> |
-        <a href="galeria.php">Galería</a> |
-        <a href="cerrar.php">Cerrar</a> |
-    </nav>
-    
-    <div>
-        <p>Mi Portfolio</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Datos del proyecto
+                </div>
+                <div class="card-body">
+                    <form action="galeria.php" method="post">
+                        <label for="nombre">Nombre del Proyecto:</label>
+                        <input type="text" class="form-control" name="nombre"><br/>
+                        <label for="archivo">Imagen del proyecto:</label>
+                        <input type="file" class="form-control" name="archivo"><br/><br/>
+
+                        <input type="submit" class="btn btn-success" value="Enviar proyecto">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table table-secondary">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Aplicación web</td>
+                            <td>app-web.jpg</td>
+                        </tr>
+                        <tr class="">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
+</div>
 
-</body>
-</html>
+<?php include("footer.php"); ?>
+

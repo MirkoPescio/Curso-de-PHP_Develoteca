@@ -1,4 +1,21 @@
-<?php  ?>
+<?php 
+
+  session_start();
+  if($_POST){
+    if( ($_POST['usuario']=="mirko") && ($_POST['password']=="12345") ){
+
+        $_SESSION['usuario']="mirko";
+
+        echo "Logueado!!";
+
+        header("location:index.php"); // Redirecciono al usuario a la página principal
+    } else {
+        // Se puede ejecutar código javascript a través de php
+        echo "<script> alert('Login incorrecto'); </script>";
+    }
+  }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,4 +1,11 @@
-<?php?>
+<?php
+
+  session_start();
+  if( isset($_SESSION['usuario'])!="mirko" ){
+    header("location:login.php"); // Si no se encuentra el usuario, me redirecciona al login
+  }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,5 +22,5 @@
     <nav>
         <a href="index.php">Inicio</a> |
         <a href="galeria.php">Galería</a> |
-        <a href="cerrar.php">Cerrar</a> |
+        <a href="cerrar.php">Cerrar</a>
     </nav>
