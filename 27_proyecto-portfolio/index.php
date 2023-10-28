@@ -1,5 +1,6 @@
 <?php include("header.php"); ?>
     
+    <br/><hr/><br/>
     <div>
         <p>Mi Portfolio</p>
     </div>
